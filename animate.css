@@ -1,0 +1,80 @@
+.oneContainer>section{
+    animation-name:showFront;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+}
+.oneContainer>img{
+    opacity: 0;
+    animation-name:showFrontImg;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    Animation-delay:0.5s;
+}
+@keyframes showFront {
+        0%{
+            margin-left: -8%;
+            opacity: 0;
+        }
+        100%{
+            margin-left: 0%;
+            opacity: 1;
+            position: relative;
+            z-index: 1;
+        }
+}
+@keyframes showFrontImg{
+    0%{
+        margin-right: -8%;
+        opacity: 0;
+    }
+    100%{
+        position: relative;
+        margin-right: 0%;
+        opacity: 1;
+        z-index: 0;
+    }
+}
+.hideElem{
+    animation-name:hide;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+}
+.showElem{
+    animation-name:show;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes hide {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes show{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    } 
+}
+@media(max-width:998px){
+    @keyframes showFrontImg{
+        0%{
+            margin-right: -8%;
+            opacity: 0;
+        }
+        100%{
+            position: relative;
+            margin-right: 0%;
+            opacity: 0.3;
+            z-index: 0;
+        }
+    }
+}
+header{
+    z-index: 3;
+}
+
